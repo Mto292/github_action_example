@@ -1,0 +1,19 @@
+name: CI
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: loop
+        run: |
+          for i in 1 2 3
+          do 
+            echo "loop index $i"
+          done
+      - name: Loop Finish
+        run: echo "Finished"
