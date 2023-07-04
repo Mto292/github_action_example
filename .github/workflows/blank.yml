@@ -17,3 +17,10 @@ jobs:
           done
       - name: Loop Finish
         run: echo "Finished"
+      - name: Dizeyi Böl
+        run: |
+          my_string="Hello,World,OpenAI"
+          IFS=',' read -ra parts <<< "$my_string"
+          for part in "${parts[@]}"; do
+            echo "Bölünmüş parça: $part"
+          done
